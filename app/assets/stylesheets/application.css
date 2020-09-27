@@ -1,0 +1,587 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+  @font-face {
+    font-family: ‘GT Walsheim’;
+    src: url(font-path(‘GTWalsheimProTrial-Black.eot’) + “?#iefix”) format(‘embedded-opentype’),
+  url(font-path(‘GTWalsheimProTrial-Black.woff’)) format(‘woff’),
+  url(font-path(‘GTWalsheimProTrial-Black.ttf’)) format(‘truetype’),
+  url(font-path(‘GTWalsheimProTrial-Black.svg’) + “#GTWalsheim”) format(‘svg’);
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background: #e6ecf8;
+    font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    height: 100%;
+}
+
+/*######## Smart Green ########*/
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 40%;
+    margin: auto;
+    background: #f8f8f8;
+    font-size: 12px;
+    color: #551a8b;
+    border-radius: 15px;
+}
+
+.card h1 {
+    display: flex;
+    background-color: #80d000;
+    padding: 20px 10px;
+    justify-content: center;
+    font: 36px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-shadow: 1px 1px 1px #949494;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.menu-group {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    /*flex: 1;*/
+}
+
+.menu-group ul.menu {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: none !important;
+}
+
+.button {
+    display: flex;
+    padding: 15px 28px;
+    border: 1px solid #2E2F30;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #2E2F30;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #dae2c5;
+    transition: all 0.2s;
+}
+
+.main {
+}
+
+.header {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 15%;
+    background-color: #EFEFEF;
+}
+
+#statistics.header a{
+    margin: 0 !important;
+}
+
+.header .button-header a {
+    font-size: 14px;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    background-color: #009fd0;
+    padding: 5px 11px;
+    border-radius: 6px;
+    color: #EFEFEF;
+}
+
+.header a {
+    margin-left: 28%;
+    text-decoration: none;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Dungeon;
+}
+
+
+
+.content {
+    display: flex;
+    background-color: #F7F7F7;
+    margin: 50px 20% 0;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.content-header h1 {
+    display: flex;
+    justify-content: center;
+    background-color: #80d000;
+    margin: 50px 20% 0;
+    padding: 25px 15px;
+    color: #551a8b;
+    text-shadow: 1px 1px 1px #949494;
+    border-radius: 6px;
+}
+
+.content table {
+    display: flex;
+    margin: 20px 0;
+}
+
+.content table tr {
+    margin: 20px 0;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    flex: 1 ;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.wrap {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    width: 100%;
+    height: 150px;
+    padding: 25px 5px;
+    border-bottom: 1px solid #BBBBBB;
+}
+
+
+.wrap ul.first-column {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.wrap ul.second-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrap ul div.li-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2E2F30;
+
+}
+
+.wrap ul.first-column div.li-value {
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: lighter;
+    font-family: "Roboto Light";
+}
+
+.wrap ul div.li-show {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 16px;
+    text-decoration: none;
+    margin-bottom: 10px;
+
+}
+
+.wrap ul div.li-show a {
+    background-color: #80d000;
+    color: white;
+}
+
+.wrap ul div.li-edit {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 16px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.wrap ul div.li-edit a {
+    background-color: #009fd0;
+    color: white;
+}
+
+.wrap ul div.li-destroy {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 16px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.wrap ul div.li-destroy a {
+    background-color: #d22f4e;
+    color: white;
+}
+
+.wrap  ul  li  a {
+    text-decoration: none;
+    padding: 3px 14px;
+    border-radius: 4px;
+}
+
+.buttons-links a {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+ul {
+    width: 100%;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    list-style: none;
+    margin: 50px 15px;
+    align-items: center;
+    margin: auto;
+
+}
+
+ul#second-list {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: none;
+}
+
+ul#second-list a {
+    text-decoration: none;
+    padding: 5px 10px;
+    /*margin: 10px 25px;*/
+}
+
+
+
+/************************************************/
+
+/*Genres*/
+
+.content-genre {
+    display: flex;
+    background-color: #F7F7F7;
+    margin: 50px 20% 0;
+    padding: 0px 15px;
+    justify-content: space-between;
+}
+
+.wrap-genre {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    width: 100%;
+    padding: 25px 5px;
+    border-bottom: 1px solid #BBBBBB;
+}
+
+.wrap-genre ul.first-column {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.wrap-genre ul.second-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrap-genre ul div.li-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2E2F30;
+
+}
+
+.wrap-genre ul.first-column div.li-value {
+    margin-top: 40px;
+    font-size: 10px;
+    font-weight: lighter;
+    font-family: "Roboto Light";
+}
+
+.wrap-genre ul div.li-show {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 16px;
+    text-decoration: none;
+    margin-bottom: 10px;
+
+}
+
+.wrap-genre ul div.li-show a {
+    background-color: #80d000;
+    color: white;
+}
+
+.wrap-genre ul div.li-edit {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 16px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.wrap-genre ul div.li-edit a {
+    background-color: #009fd0;
+    color: white;
+}
+
+.wrap-genre ul div.li-destroy {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 16px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.wrap-genre ul div.li-destroy a {
+    background-color: #d22f4e;
+    color: white;
+}
+
+.wrap-genre  ul  li  a {
+    text-decoration: none;
+    padding: 3px 10px;
+    border-radius: 4px;
+}
+
+
+/*##################################################################################*/
+
+/*FORM*/
+
+
+/* Elegant Aero */
+.elegant-aero {
+    margin-left:auto;
+    margin-right:auto;
+
+    max-width: 500px;
+    background: #D2E9FF;
+    padding: 20px 20px 20px 20px;
+    font: 12px Arial, Helvetica, sans-serif;
+    color: #666;
+}
+.elegant-aero h1 {
+    font: 24px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding: 10px 10px 10px 20px;
+    display: block;
+    background: #C0E1FF;
+    border-bottom: 1px solid #B8DDFF;
+    margin: -20px -20px 15px;
+}
+.elegant-aero h1>span {
+    display: block;
+    font-size: 11px;
+}
+
+.elegant-aero label>span {
+    float: left;
+    margin-top: 10px;
+    color: #5E5E5E;
+}
+.elegant-aero label {
+    display: block;
+    margin: 0px 0px 5px;
+}
+.elegant-aero label>span {
+    float: left;
+    width: 20%;
+    text-align: right;
+    padding-right: 15px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.elegant-aero input[type="text"], .elegant-aero input[type="email"], .elegant-aero textarea, .elegant-aero select {
+    color: #888;
+    width: 70%;
+    padding: 0px 0px 0px 5px;
+    border: 1px solid #C5E2FF;
+    border-radius: 6px;
+    background: #FBFBFB;
+    outline: 0;
+    -webkit-box-shadow:inset 0px 1px 6px #ECF3F5;
+    box-shadow: inset 0px 1px 6px #ECF3F5;
+    font: 200 12px/25px Arial, Helvetica, sans-serif;
+    height: 30px;
+    line-height:15px;
+    margin: 2px 6px 16px 0px;
+}
+.elegant-aero textarea{
+    height:100px;
+    padding: 5px 0px 0px 5px;
+    width: 70%;
+}
+.elegant-aero select {
+    background: #fbfbfb url('down-arrow.png') no-repeat right;
+    background: #fbfbfb url('down-arrow.png') no-repeat right;
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    width: 70%;
+}
+.elegant-aero .actions input{
+    padding: 10px 30px 10px 30px;
+    margin-top: 20px;
+    background: #66C1E4;
+    border: none;
+    color: #FFF;
+    box-shadow: 1px 1px 1px #4C6E91;
+    -webkit-box-shadow: 1px 1px 1px #4C6E91;
+    -moz-box-shadow: 1px 1px 1px #4C6E91;
+    text-shadow: 1px 1px 1px #5079A3;
+
+}
+.elegant-aero .button:hover{
+    background: #3EB1DD;
+}
+input#book_page {
+    color: #888;
+    color: #888;
+    width: 70%;
+    padding: 0px 0px 0px 5px;
+    border: 1px solid #C5E2FF;
+    border-radius: 6px;
+    background: #FBFBFB;
+    outline: 0;
+    -webkit-box-shadow: inset 0px 1px 6px #ECF3F5;
+    box-shadow: inset 0px 1px 6px #ECF3F5;
+    font: 200 12px/25px Arial, Helvetica, sans-serif;
+    height: 30px;
+    line-height: 15px;
+    margin: 2px 6px 16px 0px;
+}
+
+h1#title-pages {
+    text-align: center;
+    padding: 50px 0 25px;
+    color: #2E2F30;
+}
+
+/***********************************************************/
+
+/*SHOW */
+
+.content-show {
+    display: block;
+    margin-top: 100px;
+}
+
+.elegant-aero-show {
+    position: relative;
+    margin-top: 150px;
+    margin: auto;
+
+    max-width: 500px;
+    background: #D2E9FF;
+    padding: 20px 20px 20px 20px;
+    font: 12px Arial, Helvetica, sans-serif;
+    color: #666;
+}
+
+.elegant-aero-show strong {
+    padding-left: 5px;
+}
+
+.elegant-aero-show label {
+    display: block;
+    color: #888;
+    width: 70%;
+    padding: 8px 0px 10px 5px;
+    border: 1px solid #C5E2FF;
+    border-radius: 6px;
+    background: #FBFBFB;
+    outline: 0;
+    -webkit-box-shadow: inset 0px 1px 6px #ECF3F5;
+    box-shadow: inset 0px 1px 6px #ECF3F5;
+    font: 200 12px/25px Arial, Helvetica, sans-serif;
+    height: 30px;
+    line-height: 15px;
+    margin: 2px 6px 16px 0px;
+}
+
+.elegant-aero-show textarea {
+    height:100px;
+    padding: 5px 0px 0px 5px;
+    width: 70%;
+    display: block;
+    color: #888;
+    border: 1px solid #C5E2FF;
+    border-radius: 6px;
+    background: #FBFBFB;
+    outline: 0;
+    -webkit-box-shadow: inset 0px 1px 6px #ECF3F5;
+    box-shadow: inset 0px 1px 6px #ECF3F5;
+    font: 200 12px/25px Arial, Helvetica, sans-serif;
+    line-height: 15px;
+    margin: 2px 6px 16px 0px;
+}
+
+.button-edit {
+    margin-top: 20px;
+}
+
+.button-edit a{
+    padding: 10px 30px 10px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 40px;
+    background: #66C1E4;
+    border: none;
+    color: #FFF;
+    box-shadow: 1px 1px 1px #4C6E91;
+    -webkit-box-shadow: 1px 1px 1px #4C6E91;
+    -moz-box-shadow: 1px 1px 1px #4C6E91;
+    text-shadow: 1px 1px 1px #5079A3;
+}
