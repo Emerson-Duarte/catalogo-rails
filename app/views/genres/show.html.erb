@@ -1,0 +1,20 @@
+<div class="header">
+  <%= link_to 'CATALOG', root_path %>
+  <div class="button-header">
+    <%= link_to 'New Genre', new_genre_path %>
+  </div>
+</div>
+<div class="content-show">
+  <div class="elegant-aero-show">
+
+    <div>
+      <strong>Genre</strong>
+      <label><%= @genre.description %></label>
+
+    </div>
+
+    <div class="button-edit"><%= link_to 'Edit', edit_genre_path(@genre) %></div>
+
+  </div>
+
+</div>

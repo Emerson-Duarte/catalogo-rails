@@ -1,0 +1,28 @@
+<div class="main">
+  <div class="header">
+    <%= link_to 'CATALOG', root_path %>
+    <div class="button-header">
+      <%= link_to 'New Genre', new_genre_path %>
+    </div>
+  </div>
+  <div class="content-header">
+    <h1>Genres</h1>
+  </div>
+  <div class="content-genre">
+    <div class="cards">
+      <% @genres.each do |genre| %>
+        <div class="wrap-genre">
+          <ul class="first-column">
+            <div class="li-title"><li><%= genre.description %></div>
+            <div class="li-value"><li></li></div>
+          </ul>
+          <ul class="second-column">
+            <div class="li-edit"><li class="button-index"><%= link_to 'Edit', edit_genre_path(genre) %></li></div>
+            <div class="li-destroy"><li class="button-index"><%= link_to 'Destroy', genre, method: :delete, data: { confirm: 'Are you sure?' } %></li></div>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+    <br>
+  </div>
+</div>

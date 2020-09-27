@@ -1,0 +1,31 @@
+<div class="main">
+  <div class="header">
+    <%= link_to 'CATALOG', root_path %>
+    <div class="button-header">
+     <%= link_to 'New Book', new_book_path %>
+    </div>
+  </div>
+    <div class="content-header">
+      <h1>Books</h1>
+    </div>
+  <div class="content">
+    <div class="cards">
+      <% @books.each do |book| %>
+        <div class="wrap">
+          <ul class="first-column">
+              <div class="li-title"><li><%= book.title %></li></div>
+              <div class="li-value"><li>Genre: <%= book.genre.description %></li></div>
+          </ul>
+          <ul class="second-column">
+            <div class="li-edit"><li class="button-index"><%= link_to 'Edit', edit_book_path(book) %></li></div>
+            <div class="li-show"><li class="button-index"><%= link_to 'Show', book %></li></div>
+            <div class="li-destroy"><li class="button-index"><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></li></div>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+    <br>
+  </div>
+</div>
+
+

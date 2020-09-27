@@ -1,0 +1,42 @@
+<div class="header" id="statistics">
+  <%= link_to 'CATALOG', root_path %>
+</div>
+<div class="content-show">
+  <div class="elegant-aero-show">
+    <div>
+      <strong>Maior livro(Mais páginas)</strong>
+      <label><%= max_pages.title %> com <%= max_pages.page %> páginas</label>
+
+    </div>
+
+    <div>
+      <strong>Livro mais caro</strong>
+      <label><%= max_value.title %></label>
+    </div>
+
+    <div>
+      <strong>Quantidade de livros</strong>
+      <label><%= count_books %> livros cadastrados</label>
+    </div>
+
+    <div>
+      <strong>Valor de todos os livros</strong>
+      <label><%= value_formatted(sum_of_value) %></label>
+    </div>
+
+    <div>
+      <strong>Soma de todas as páginas de todos os livros</strong>
+      <label><%= sum_of_pages %> páginas</label>
+    </div>
+
+    <div>
+      <strong>Último livro cadastrado</strong>
+      <label><%= last_book_created.title %></label>
+    </div>
+
+    <div>
+      <strong>Gênero mais cadastrado</strong>
+      <label><%= most_used_genre %></label>
+    </div>
+  </div>
+</div>

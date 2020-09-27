@@ -1,0 +1,10 @@
+<div class="header">
+  <%= link_to 'CATALOG', root_path %>
+  <div class="button-header">
+    <%= link_to 'New Book', new_book_path %>
+  </div>
+</div>
+<h1 id="title-pages">Creating Book</h1>
+
+<%= render 'form', book: @book %>
+

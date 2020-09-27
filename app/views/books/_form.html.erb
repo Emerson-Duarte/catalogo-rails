@@ -1,0 +1,44 @@
+<div class="elegant-aero">
+  <%= form_with(model: book, local: true) do |form| %>
+    <% if book.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+        <ul>
+          <% book.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :title %>
+      <%= form.text_field :title %>
+    </div>
+
+    <div class="field">
+      <%= form.label :synopsis %>
+      <%= form.text_area :synopsis %>
+    </div>
+
+    <div class="field">
+      <%= form.label :genre_id %>
+      <%= form.collection_select(:genre_id, Genre.all, :id, :description) %>
+    </div>
+
+    <div class="field">
+      <%= form.label :value %>
+      <%= form.text_field :value %>
+    </div>
+
+    <div class="field">
+      <%= form.label :page %>
+      <%= form.number_field :page %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
+</div>
