@@ -24,11 +24,6 @@ module BooksHelper
   end
 
   def most_used_genre
-    h = Book.group(:genre_id).count
-    # h = Book.joins(:genre).group(:genre_id).count
-    h.sort_by { |k, v| -v}
+    Genre.left_outer_joins(:books).select('genres.*, COUNT(1) AS book_count').group('genre_id').order('book_count').last
   end
-
-
-
 end
