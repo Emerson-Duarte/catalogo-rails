@@ -1,5 +1,6 @@
 class GenresController < ApplicationController
   before_action :set_genre, only: [:show, :edit, :update, :destroy]
+
   # GET /genres
   # GET /genres.json
   def index
@@ -70,4 +71,5 @@ class GenresController < ApplicationController
     def genre_params
       params.require(:genre).permit(:description)
     end
+
 end
